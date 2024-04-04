@@ -148,8 +148,7 @@ for i = 1:maxiter
         break
     end
     if (mod(i, disprate) == 0) % Displaying intermediate results
-        fprintf('Iter: %d, Error: %0.6f, MPSNR: %#.4g, MSSIM: %#.4g, Time: %0.2f.\n', ...
-            i, move_U, mpsnr_tmp, mssim_tmp, sum(running_time));
+        fprintf('Iter: %d, Error: %0.6f.\n', i, converge_rate_U(i));
     end
 end
 
