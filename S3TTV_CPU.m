@@ -153,7 +153,6 @@ for i = 1:maxiter
 end
 
 fprintf('~~~ P-PDS ENDS ~~~\n');
-fprintf('Total iteration of P-PDS: %d\n', i);
 
 %% Organizing results for output
 HSI_noisy                       = gather(HSI_noisy);
