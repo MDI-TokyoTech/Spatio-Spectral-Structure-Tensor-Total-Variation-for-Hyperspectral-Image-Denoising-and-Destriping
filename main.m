@@ -38,7 +38,7 @@ HSI_noisy = single(HSI_noisy);
 
 %% Setting parameters
 %%%%%%%%%%%%%%%%%%%%% User Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-params.rho = 0.95; % Parameters for the radii of the noise terms
+params.rho = 0.95; % Parameter for the radii of the noise terms
 
 params.blocksize = [10,10]; % Block size of S3TTV
 
