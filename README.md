@@ -11,7 +11,7 @@ Apr. 4, 2024: v1.0
 For more information, see the following
 
 - Project website: https://www.mdi.c.titech.ac.jp/publications/s3ttv
-- Preprint paper: 
+- Preprint paper: https://arxiv.org/abs/2404.03313
 
 ## How to use
 1. **Setting parameters**
