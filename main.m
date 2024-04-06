@@ -46,7 +46,7 @@ params.stopcri = 1e-5; % Stopping criterion
 params.maxiter = 2; % Maximum number of iterations
 params.disprate = 100; % Period to display intermediate results
 
-use_GPU = 0; % 1, if you use GPU, 0, if you use CPU
+use_GPU = 1; % 1, if you use GPU, 0, if you use CPU
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Radius of v-centered l2-ball constraint serving data-fidelity
@@ -80,19 +80,10 @@ elseif use_GPU == 0
 else
 end
 
+
 %% Plotting results
 mpsnr_S3TTV  = MPSNR(HSI_restored, HSI_clean);
 mssim_S3TTV  = MSSIM(HSI_restored, HSI_clean);
-
-fprintf('~~~ SETTINGS ~~~\n');
-fprintf('Image: %s Size: (%d, %d, %d)\n', image, hsi.n1, hsi.n2, hsi.n3);
-fprintf('Gaussian sigma: %g\n', deg.Gaussian_sigma);
-fprintf('Sparse rate: %g\n', deg.sparse_rate);
-fprintf('Stripe rate: %g\n', deg.stripe_rate);
-fprintf('Stripe intensity: %g\n', deg.stripe_intensity);
-fprintf('Rho: %g\n', params.rho);
-fprintf('Stopping criterion: %g\n', params.stopcri);
-fprintf('Blocksize: (%d, %d)\n', params.blocksize(1), params.blocksize(2))
 
 fprintf('~~~ RESULTS ~~~\n');
 fprintf('MPSNR: %#.4g\n', mpsnr_S3TTV);
